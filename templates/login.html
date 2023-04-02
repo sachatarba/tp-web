@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+
+    <title>Sticky Footer Navbar Template · Bootstrap v5.3</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!— Custom styles for this template —>
+    <link href="../static/css/mycss.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column h-100">
+
+<header>
+    <!— Fixed navbar —>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AskTask</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <form class="d-flex me-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Ask</button>
+                </form>
+                <div class="d-flex">
+                    <div class="row">
+                            <span class="col-12" style="margin: 0px 0px 0px 0px">
+                                <p class="unknown-user" style="margin: 1px 0px 0px 0px">
+                                    <a href="#" style="margin: 5px 10px 0px 0px">login</a>
+                                    <a href="#">register</a>
+                                </p>
+                            </span>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!— Begin page content —>
+<main class="flex-shrink-0">
+    <div class="container">
+        <div class="row" style="margin-top: 65px">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-4">
+                        <div style="margin-bottom: 10px">
+                            <h2>Log In</h2>
+                        </div>
+                        <p style="color: red">Sorry, wrong password!</p>
+                        <div class="input-group" style="margin-bottom: 10px">
+                            <span class="input-group-text">Login</span>
+                            <input type="text" aria-label="login" class="form-control">
+                        </div>
+                        <div class="input-group" style="margin-bottom: 10px">
+                            <span class="input-group-text">Password</span>
+                            <input type="text" aria-label="password" class="form-control">
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <button type="button" class="btn btn-success" style="margin-top: 10px; margin-bottom: 10px">Login!</button>
+                            </div>
+                            <div class="col-9">
+                                <button type="button" class="btn btn-dark" style="margin-top: 10px; margin-bottom: 10px">Create new account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3" style="margin-top: 30px">
+                <div class="row">
+                    <h1>Popular Tags</h1>
+                </div>
+                <div class="row">
+                    <div class="tags">
+                        <p>
+                            <a href="#" style="color: black;">perl</a>
+                            <a href="#" style="color: red;">Python</a>
+                            <a href="#" style="color: black;">TechnoPark</a>
+                        </p>
+                        <p>
+                            <a href="#" style="color: black;">MySql</a>
+                            <a href="#" style="color: green;">django</a>
+                        </p>
+                        <p>
+                            <a href="#" style="color: orange;">Mail.ru</a>
+                            <a href="#" style="color: black;">Voloshin</a>
+                            <a href="#" style="color: purple;">Firefox</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1>Best Members</h1>
+                </div>
+                <div class="row">
+                    <div class="members">
+                        <p><a href="#">Mr.Freeman</a></p>
+                        <p><a href="#">Dr.House</a></p>
+                        <p><a href="#">Bender</a></p>
+                        <p><a href="#">Queen Victoria</a></p>
+                        <p><a href="#">V. Pupkin</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">All rights are reserved</span>
+    </div>
+</footer>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

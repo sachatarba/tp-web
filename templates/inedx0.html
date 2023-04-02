@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+
+    <title>Sticky Footer Navbar Template · Bootstrap v5.3</title>
+    <link href="../static/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
+
+    <!— Custom styles for this template —>
+    <link href="../static/css/mycss.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column h-100">
+
+<header>
+    <!— Fixed navbar —>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AskTask</a>
+<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"-->
+<!--                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                <span class="navbar-toggler-icon"></span>-->
+<!--            </button>-->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+<!--                <ul class="navbar-nav me-auto mb-2 mb-md-0">-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link active" aria-current="page" href="#">Home</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link" href="#">Link</a>-->
+<!--                    </li>-->
+<!--                    <li class="nav-item">-->
+<!--                        <a class="nav-link disabled">Disabled</a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+                <form class="d-flex me-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Ask</button>
+                </form>
+                <div class="d-flex">
+                    <span class="user-info">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="user-avatar">
+                                    <img src="../static/img/unknown_user.png" alt="avatar">
+                                </div>
+                            </div>
+                            <div class="col-8">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <font color="white">Dr.House</font>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <a href="#">settings</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="#">log out</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!--                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">-->
+<!--                        <button class="btn btn-outline-success" type="submit">Search</button>-->
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!— Begin page content —>
+<main class="flex-shrink-0">
+    <div class="container">
+        <div class="questions-header">
+            <div class="row align-items-end">
+                <div class="col-4">
+                    <h1>New questions</h1>
+                </div>
+                <div class="col-4">
+                    <div class="hot-questions">
+                        <h1><a href="#">Hot questions</a></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-9">
+
+                <div class="question">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="question-avatar">
+                                <img src="../static/img/user1.jpg" alt="avatar">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <h2><a href="#">Awesome question 1</a></h2>
+                            <div class="question-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#">Answers (3)</a>
+                                </div>
+                                <div class="col-6">
+                                    Tags: <a href="#">black_jack</a>, <a href="#">black_jack</a>
+                                </div>
+                                <div class="col-1" style="padding: 0px 0px 20px 0px">
+                                    <div class="like">
+                                        <img src="../static/img/like3.png" alt="heart">
+                                    </div>
+                                </div>
+                                <div class="col-1" style="padding-top: 14px; padding-left: 0px">
+                                    <p class="likes-counter">1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="question-avatar">
+                                <img src="../static/img/main_green.png" alt="avatar">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <h2><a href="#">Awesome question 2</a></h2>
+                            <div class="question-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#">Answers (3)</a>
+                                </div>
+                                <div class="col-6">
+                                    Tags: <a href="#">black_jack</a>, <a href="#">black_jack</a>
+                                </div>
+                                <div class="col-1" style="padding: 0px 0px 20px 0px">
+                                    <div class="like">
+                                        <img src="../static/img/like3.png" alt="heart">
+                                    </div>
+                                </div>
+                                <div class="col-1" style="padding-top: 14px; padding-left: 0px">
+                                    <p class="likes-counter">1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="question">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="question-avatar">
+                                <img src="../static/img/user3.jpg" alt="avatar">
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <h2><a href="#">Awesome question 3</a></h2>
+                            <div class="question-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua...
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <a href="#">Answers (3)</a>
+                                </div>
+                                <div class="col-6">
+                                    Tags: <a href="#">black_jack</a>, <a href="#">black_jack</a>
+                                </div>
+                                <div class="col-1" style="padding: 0px 0px 20px 0px">
+                                    <div class="like">
+                                        <img src="../static/img/like3.png" alt="heart">
+                                    </div>
+                                </div>
+                                <div class="col-1" style="padding-top: 14px; padding-left: 0px">
+                                    <p class="likes-counter">1</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <h1>Popular Tags</h1>
+                </div>
+                <div class="row">
+                    <div class="tags">
+                        <p>
+                            <a href="#" style="color: black;">perl</a>
+                            <a href="#" style="color: red;">Python</a>
+                            <a href="#" style="color: black;">TechnoPark</a>
+                        </p>
+                        <p>
+                            <a href="#" style="color: black;">MySql</a>
+                            <a href="#" style="color: green;">django</a>
+                        </p>
+                        <p>
+                            <a href="#" style="color: orange;">Mail.ru</a>
+                            <a href="#" style="color: black;">Voloshin</a>
+                            <a href="#" style="color: purple;">Firefox</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <h1>Best Members</h1>
+                </div>
+                <div class="row">
+                    <div class="members">
+                       <p><a href="#">Mr.Freeman</a></p>
+                        <p><a href="#">Dr.House</a></p>
+                        <p><a href="#">Bender</a></p>
+                        <p><a href="#">Queen Victoria</a></p>
+                        <p><a href="#">V. Pupkin</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">All rights are reserved</span>
+    </div>
+</footer>
+
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

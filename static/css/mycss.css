@@ -1,0 +1,104 @@
+.question {
+height: 200px;
+border: 2px solid black;
+border-radius: 15px;
+padding: 10px;
+margin-bottom: 10px;
+display: table;
+}
+
+.question-avatar {
+height: 100%;
+width: 100%;
+}
+
+.question-avatar > img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-radius: 50%;
+}
+
+.user-avatar > img {
+height: 90%;
+width: 95%;
+object-fit: cover;
+border-radius: 50%;
+margin-left: 3px;
+}
+
+.user-avatar {
+height: 50px;
+width: 50px;
+}
+
+.user-info {
+height: 50px;
+width: 220px;
+border: 2px solid white;
+border-radius: 15px;
+}
+
+.question-text {
+margin-bottom: 5%;
+}
+
+
+.questions-header {
+margin-top: 60px;
+}
+
+.hot-questions > a {
+vertical-align: bottom;
+}
+
+.question > a {
+color: white;
+}
+
+.like {
+height: 100%;
+width: 100%;
+}
+
+.like > img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+
+.question-asker {
+margin-top: 70px;
+margin-bottom: 20px;
+}
+
+.question-answer {
+border: 2px solid black;
+border-radius: 15px;
+padding: 10px;
+margin-bottom: 10px;
+}
+
+.question-avatar {
+height: 100%;
+width: 100%;
+}
+
+.avatar-upload {
+height: 70px;
+width: 70px;
+}
+
+.avatar-upload > img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-radius: 50%;
+}
+
+.answer-avatar > img {
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-radius: 50%;
+}
