@@ -7,7 +7,7 @@
     <link href="../static/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
 
     <!— Custom styles for this template —>
-    <link href="../static/css/mycss.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="../static/css/styles.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 <body class="d-flex flex-column h-100">
 
@@ -15,14 +15,14 @@
     <!— Fixed navbar —>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">AskTask</a>
+            <a class="navbar-brand" href="index.html">AskTask</a>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <form class="d-flex me-auto" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Ask</button>
                 </form>
                 <div class="d-flex">
-                        <span class="user-info">
+                    <span class="user-info">
                         <div class="row">
                             <div class="col-3">
                                 <div class="user-avatar">
@@ -37,15 +37,15 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-6">
-                                        <a href="#">settings</a>
+                                        <a href="settings.html">settings</a>
                                     </div>
                                     <div class="col-6">
-                                        <a href="#">log out</a>
+                                        <a href="login.html">log out</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        </span>
+                    </span>
                 </div>
             </div>
         </div>
@@ -55,40 +55,61 @@
 <!— Begin page content —>
 <main class="flex-shrink-0">
     <div class="container">
-        <div class="row" style="margin-top: 65px">
+        <div class="row" style="margin-top: 75px">
             <div class="col-9">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-8">
                         <div style="margin-bottom: 10px">
                             <h2>Settings: Dr.House</h2>
                         </div>
                         <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text">Login</span>
-                            <input type="text" aria-label="login" class="form-control">
+                            <span class="input-group-text input-label">Login</span>
+                            <input type="text" aria-label="login" class="form-control"
+                                   placeholder="input your login...">
                         </div>
                         <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text">Email</span>
-                            <input type="text" aria-label="email" class="form-control">
+                            <span class="input-group-text input-label">Email</span>
+                            <input type="text" aria-label="email" class="form-control"
+                                   placeholder="input your email...">
                         </div>
                         <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text">Nick Name</span>
-                            <input type="text" aria-label="nick-name" class="form-control">
+                            <span class="input-group-text input-label">Nickname</span>
+                            <input type="text" aria-label="nick-name" class="form-control"
+                                   placeholder="input your nickname...">
                         </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="avatar-upload">
-                                    <div class="input-group" style="margin-bottom: 10px">
-                                    <span class="input-group-text">Upload avatar</span>
-                                    <img src="../static/img/user1.jpg" aria-label="Repeat password" class="form-control">
-                                    <button type="button" class="btn btn-success">choose</button>
+                        <!--                        <div class="input-group" style="margin-bottom: 10px">-->
+                        <!--                            <span class="input-group-text">Login</span>-->
+                        <!--                            <input type="text" aria-label="login" class="form-control">-->
+                        <!--                        </div>-->
+                        <!--                        <div class="input-group" style="margin-bottom: 10px">-->
+                        <!--                            <span class="input-group-text">Email</span>-->
+                        <!--                            <input type="text" aria-label="email" class="form-control">-->
+                        <!--                        </div>-->
+                        <!--                        <div class="input-group" style="margin-bottom: 10px">-->
+                        <!--                            <span class="input-group-text">Nick Name</span>-->
+                        <!--                            <input type="text" aria-label="nick-name" class="form-control">-->
+                        <!--                        </div>-->
+                        <!--                        <div class="col-3">-->
+                        <!--                            <button type="button" class="btn btn-dark" style="margin-top: 10px; margin-bottom: 10px">-->
+                        <!--                                Register!-->
+                        <!--                            </button>-->
+                        <!--                        </div>-->
+                    </div>
+                    <div class="row">
+                        <div class="upload">
+                            <div class="row" style="margin-bottom: 10px">
+                                <div class="col-3" style="width: 9rem;">
+                                    <span class="input-group-text" style="height: 100%">Upload avatar</span>
                                 </div>
+                                <div class="col-2">
+                                    <div class="avatar-upload">
+                                        <img src="../static/img/user1.jpg">
+                                    </div>
+                                </div>
+<!--                                <div class="col-4" style="margin-left: -15px">-->
+<!--                                    <button type="button" class="btn btn-success">Choose</button>-->
+<!--                                </div>-->
                             </div>
-                                </div>
-                        </div>
-                        <div class="col-3">
-                            <button type="button" class="btn btn-dark" style="margin-top: 10px; margin-bottom: 10px">
-                                Register!
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -100,18 +121,18 @@
                 <div class="row">
                     <div class="tags">
                         <p>
-                            <a href="#" style="color: black;">perl</a>
-                            <a href="#" style="color: red;">Python</a>
-                            <a href="#" style="color: black;">TechnoPark</a>
+                            <a href="tags.html" style="color: black;">perl</a>
+                            <a href="tags.html" style="color: red;">Python</a>
+                            <a href="tags.html" style="color: black;">TechnoPark</a>
                         </p>
                         <p>
-                            <a href="#" style="color: black;">MySql</a>
-                            <a href="#" style="color: green;">django</a>
+                            <a href="tags.html" style="color: black;">MySql</a>
+                            <a href="tags.html" style="color: green;">django</a>
                         </p>
                         <p>
-                            <a href="#" style="color: orange;">Mail.ru</a>
-                            <a href="#" style="color: black;">Voloshin</a>
-                            <a href="#" style="color: purple;">Firefox</a>
+                            <a href="tags.html" style="color: orange;">Mail.ru</a>
+                            <a href="tags.html" style="color: black;">Voloshin</a>
+                            <a href="tags.html" style="color: purple;">Firefox</a>
                         </p>
                     </div>
                 </div>

@@ -87,6 +87,7 @@ width: 100%;
 .avatar-upload {
 height: 70px;
 width: 70px;
+margin: 0px;
 }
 
 .avatar-upload > img {
@@ -94,6 +95,7 @@ height: 100%;
 width: 100%;
 object-fit: cover;
 border-radius: 50%;
+border: 2px solid black;
 }
 
 .answer-avatar > img {
@@ -101,4 +103,11 @@ height: 100%;
 width: 100%;
 object-fit: cover;
 border-radius: 50%;
+}
+
+
+.input-label {
+    width: 9rem;
+    display: block;
+    text-align: left;
 }

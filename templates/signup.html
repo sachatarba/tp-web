@@ -7,7 +7,7 @@
     <link href="../static/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
 
     <!— Custom styles for this template —>
-    <link href="../static/css/mycss.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="../static/css/styles.css" rel="stylesheet" crossorigin="anonymous">
 </head>
 <body class="d-flex flex-column h-100">
 
@@ -15,7 +15,7 @@
     <!— Fixed navbar —>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">AskTask</a>
+            <a class="navbar-brand" href="index.html">AskTask</a>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <form class="d-flex me-auto" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -25,11 +25,11 @@
                     <div class="row">
                             <span class="col-12" style="margin: 0px 0px 0px 0px">
                                 <p class="unknown-user" style="margin: 1px 0px 0px 0px">
-                                    <a href="#" style="margin: 5px 10px 0px 0px">login</a>
-                                    <a href="#">register</a>
+                                    <a href="login.html" style="margin: 5px 10px 0px 0px">login</a>
+                                    <a href="signup.html">register</a>
                                 </p>
                             </span>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -46,39 +46,51 @@
                         <div style="margin-bottom: 10px">
                             <h2>Registration</h2>
                         </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-8">
                         <p style="color: red">Sorry, this email address already registered!</p>
                         <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text">Login</span>
-                            <input type="text" aria-label="login" class="form-control">
+                                    <span class="input-group-text input-label">Login</span>
+                                    <input type="text" aria-label="login" class="form-control"
+                                    placeholder="input your login...">
                         </div>
                         <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text">Email</span>
-                            <input type="text" aria-label="email" class="form-control">
+                            <span class="input-group-text input-label">Email</span>
+                            <input type="text" aria-label="email" class="form-control"
+                                   placeholder="input your email...">
                         </div>
                         <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text">Nick Name</span>
-                            <input type="text" aria-label="nick-name" class="form-control">
+                            <span class="input-group-text input-label">Nickname</span>
+                            <input type="text" aria-label="nick-name" class="form-control"
+                                placeholder="input your nickname...">
                         </div>
                         <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text">Password</span>
-                            <input type="text" aria-label="password" class="form-control">
+                            <span class="input-group-text input-label">Password</span>
+                            <input type="text" aria-label="password" class="form-control"
+                                placeholder="input your password...">
                         </div>
                         <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text">Repeat password</span>
-                            <input type="text" aria-label="Repeat password" class="form-control">
+                            <label class="input-group-text input-label">Repeat password</label>
+                            <input type="text" aria-label="Repeat password" class="form-control"
+                                placeholder="input your password...">
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <div class="input-group" style="margin-bottom: 10px">
-                                    <span class="input-group-text">Upload avatar</span>
-                                    <input type="text" aria-label="Repeat password" class="form-control">
-                                    <button type="button" class="btn btn-success">choose</button>
+                                    <span class="input-group-text input-label">Upload avatar</span>
+                                    <input type="text" aria-label="avatar" class="form-control"
+                                        placeholder="choose your avatar...">
+                                    <button type="button" class="btn btn-success">Choose</button>
                                 </div>
                             </div>
                         </div>
                         <div class="col-3">
-                            <button type="button" class="btn btn-dark" style="margin-top: 10px; margin-bottom: 10px">Register!</button>
+                            <button type="button" class="btn btn-dark" style="margin-top: 10px; margin-bottom: 10px">
+                                Register!
+                            </button>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -89,18 +101,18 @@
                 <div class="row">
                     <div class="tags">
                         <p>
-                            <a href="#" style="color: black;">perl</a>
-                            <a href="#" style="color: red;">Python</a>
-                            <a href="#" style="color: black;">TechnoPark</a>
+                            <a href="tags.html" style="color: black;">perl</a>
+                            <a href="tags.html" style="color: red;">Python</a>
+                            <a href="tags.html" style="color: black;">TechnoPark</a>
                         </p>
                         <p>
-                            <a href="#" style="color: black;">MySql</a>
-                            <a href="#" style="color: green;">django</a>
+                            <a href="tags.html" style="color: black;">MySql</a>
+                            <a href="tags.html" style="color: green;">django</a>
                         </p>
                         <p>
-                            <a href="#" style="color: orange;">Mail.ru</a>
-                            <a href="#" style="color: black;">Voloshin</a>
-                            <a href="#" style="color: purple;">Firefox</a>
+                            <a href="tags.html" style="color: orange;">Mail.ru</a>
+                            <a href="tags.html" style="color: black;">Voloshin</a>
+                            <a href="tags.html" style="color: purple;">Firefox</a>
                         </p>
                     </div>
                 </div>
