@@ -1,0 +1,123 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+
+    <title>Sticky Footer Navbar Template · Bootstrap v5.3</title>
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet" crossorigin="anonymous">
+
+    <!— Custom styles for this template —>
+    <link href="{% static "css/styles.css" %}" rel="stylesheet" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column h-100">
+
+<header>
+    <!— Fixed navbar —>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url "index" %}">AskTask</a>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <form class="d-flex me-auto" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Ask</button>
+                </form>
+                <div class="d-flex">
+                    {% block "user-info" %}
+                        {% include "./unauthorized_user.html" %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!— Begin page content —>
+<main class="flex-shrink-0">
+    <div class="container">
+        <div class="questions-header">
+            {% block "header" %}
+                <div class="row">
+                    <div class="col-4">
+                        <h1>New question</h1>
+                    </div>
+                </div>
+            {% endblock %}
+        </div>
+
+        <div class="row">
+            <div class="col-9">
+                {% block "main-body" %}
+                <div class="input-group">
+                    <span class="input-group-text">Title</span>
+                    <input type="text" aria-label="Title" class="form-control">
+                </div>
+                <div class="input-group" style="margin-top: 10px">
+                    <span class="input-group-text">Text</span>
+                    <textarea class="form-control" rows="10" aria-label="With textarea"></textarea>
+                </div>
+                <div class="input-group" style="margin-top: 10px">
+                    <span class="input-group-text">Tags</span>
+                    <input type="text" aria-label="Title" class="form-control">
+                </div>
+                <button type="button" class="btn btn-dark" style="margin-top: 10px; margin-bottom: 10px">Ask</button>
+                {% endblock %}
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <h1>Popular Tags</h1>
+                </div>
+                <div class="row">
+                    {% block "tags" %}
+                    <div class="tags">
+                        <p>
+                            <a href="#" style="color: black;">perl</a>
+                            <a href="#" style="color: red;">Python</a>
+                            <a href="#" style="color: black;">TechnoPark</a>
+                        </p>
+                        <p>
+                            <a href="#" style="color: black;">MySql</a>
+                            <a href="#" style="color: green;">django</a>
+                        </p>
+                        <p>
+                            <a href="#" style="color: orange;">Mail.ru</a>
+                            <a href="#" style="color: black;">Voloshin</a>
+                            <a href="#" style="color: purple;">Firefox</a>
+                        </p>
+                    </div>
+                    {% endblock %}
+                </div>
+                <div class="row">
+                    <h1>Best Members</h1>
+                </div>
+                <div class="row">
+                    {% block "members" %}
+                    <div class="members">
+                        <p><a href="#">Mr.Freeman</a></p>
+                        <p><a href="#">Dr.House</a></p>
+                        <p><a href="#">Bender</a></p>
+                        <p><a href="#">Queen Victoria</a></p>
+                        <p><a href="#">V. Pupkin</a></p>
+                    </div>
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+
+        {% block "paginator" %}
+            {% include "./paginator.html" %}
+        {% endblock %}
+    </div>
+</main>
+
+{% block "footer" %}
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+        <span class="text-muted">All rights are reserved</span>
+    </div>
+</footer>
+{% endblock %}
+
+</body>
+</html>

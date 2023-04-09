@@ -1,168 +1,55 @@
-<!doctype html>
-<html lang="en" class="h-100">
-<head>
-    <meta charset="utf-8">
+{% extends "inc/base.html" %}
+{% load static %}
 
-    <title>Sticky Footer Navbar Template · Bootstrap v5.3</title>
-    <link href="../static/css/bootstrap.css" rel="stylesheet" crossorigin="anonymous">
 
-    <!— Custom styles for this template —>
-    <link href="../static/css/styles.css" rel="stylesheet" crossorigin="anonymous">
-</head>
-<body class="d-flex flex-column h-100">
+{% block "user-info" %}
+    {% include "./inc/authorized_user.html" %}
+{% endblock %}
 
-<header>
-    <!— Fixed navbar —>
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">AskTask</a>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <form class="d-flex me-auto" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Ask</button>
-                </form>
-                <div class="d-flex">
-                    <span class="user-info">
-                        <div class="row">
-                            <div class="col-3">
-                                <div class="user-avatar">
-                                    <img src="../static/img/unknown_user.png" alt="avatar">
-                                </div>
-                            </div>
-                            <div class="col-8">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <font color="white">Dr.House</font>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a href="settings.html">settings</a>
-                                    </div>
-                                    <div class="col-6">
-                                        <a href="login.html">log out</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </span>
-                </div>
-            </div>
+{% block "header" %}
+
+{% endblock %}
+
+{% block "main-body" %}
+<div class="row">
+    <div class="col-8">
+        <div style="margin-bottom: 10px">
+            <h2>Settings: Dr.House</h2>
         </div>
-    </nav>
-</header>
-
-<!— Begin page content —>
-<main class="flex-shrink-0">
-    <div class="container">
-        <div class="row" style="margin-top: 75px">
-            <div class="col-9">
-                <div class="row">
-                    <div class="col-8">
-                        <div style="margin-bottom: 10px">
-                            <h2>Settings: Dr.House</h2>
-                        </div>
-                        <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text input-label">Login</span>
-                            <input type="text" aria-label="login" class="form-control"
-                                   placeholder="input your login...">
-                        </div>
-                        <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text input-label">Email</span>
-                            <input type="text" aria-label="email" class="form-control"
-                                   placeholder="input your email...">
-                        </div>
-                        <div class="input-group" style="margin-bottom: 10px">
-                            <span class="input-group-text input-label">Nickname</span>
-                            <input type="text" aria-label="nick-name" class="form-control"
-                                   placeholder="input your nickname...">
-                        </div>
-                        <!--                        <div class="input-group" style="margin-bottom: 10px">-->
-                        <!--                            <span class="input-group-text">Login</span>-->
-                        <!--                            <input type="text" aria-label="login" class="form-control">-->
-                        <!--                        </div>-->
-                        <!--                        <div class="input-group" style="margin-bottom: 10px">-->
-                        <!--                            <span class="input-group-text">Email</span>-->
-                        <!--                            <input type="text" aria-label="email" class="form-control">-->
-                        <!--                        </div>-->
-                        <!--                        <div class="input-group" style="margin-bottom: 10px">-->
-                        <!--                            <span class="input-group-text">Nick Name</span>-->
-                        <!--                            <input type="text" aria-label="nick-name" class="form-control">-->
-                        <!--                        </div>-->
-                        <!--                        <div class="col-3">-->
-                        <!--                            <button type="button" class="btn btn-dark" style="margin-top: 10px; margin-bottom: 10px">-->
-                        <!--                                Register!-->
-                        <!--                            </button>-->
-                        <!--                        </div>-->
-                    </div>
-                    <div class="row">
-                        <div class="upload">
-                            <div class="row" style="margin-bottom: 10px">
-                                <div class="col-3" style="width: 9rem;">
-                                    <span class="input-group-text" style="height: 100%">Upload avatar</span>
-                                </div>
-                                <div class="col-2">
-                                    <div class="avatar-upload">
-                                        <img src="../static/img/user1.jpg">
-                                    </div>
-                                </div>
-<!--                                <div class="col-4" style="margin-left: -15px">-->
-<!--                                    <button type="button" class="btn btn-success">Choose</button>-->
-<!--                                </div>-->
-                            </div>
-                        </div>
-                    </div>
+        <div class="input-group" style="margin-bottom: 10px">
+            <span class="input-group-text input-label">Login</span>
+            <input type="text" aria-label="login" class="form-control"
+                   placeholder="input your login...">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px">
+            <span class="input-group-text input-label">Email</span>
+            <input type="text" aria-label="email" class="form-control"
+                   placeholder="input your email...">
+        </div>
+        <div class="input-group" style="margin-bottom: 10px">
+            <span class="input-group-text input-label">Nickname</span>
+            <input type="text" aria-label="nick-name" class="form-control"
+                   placeholder="input your nickname...">
+        </div>
+    </div>
+    <div class="row">
+        <div class="upload">
+            <div class="row" style="margin-bottom: 10px">
+                <div class="col-3" style="width: 9rem;">
+                    <span class="input-group-text" style="height: 100%">Upload avatar</span>
                 </div>
-            </div>
-            <div class="col-3" style="margin-top: 30px">
-                <div class="row">
-                    <h1>Popular Tags</h1>
-                </div>
-                <div class="row">
-                    <div class="tags">
-                        <p>
-                            <a href="tags.html" style="color: black;">perl</a>
-                            <a href="tags.html" style="color: red;">Python</a>
-                            <a href="tags.html" style="color: black;">TechnoPark</a>
-                        </p>
-                        <p>
-                            <a href="tags.html" style="color: black;">MySql</a>
-                            <a href="tags.html" style="color: green;">django</a>
-                        </p>
-                        <p>
-                            <a href="tags.html" style="color: orange;">Mail.ru</a>
-                            <a href="tags.html" style="color: black;">Voloshin</a>
-                            <a href="tags.html" style="color: purple;">Firefox</a>
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <h1>Best Members</h1>
-                </div>
-                <div class="row">
-                    <div class="members">
-                        <p><a href="#">Mr.Freeman</a></p>
-                        <p><a href="#">Dr.House</a></p>
-                        <p><a href="#">Bender</a></p>
-                        <p><a href="#">Queen Victoria</a></p>
-                        <p><a href="#">V. Pupkin</a></p>
+                <div class="col-2">
+                    <div class="avatar-upload">
+                        <img src="../static/img/user1.jpg">
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-</main>
+</div>
+{% endblock %}
 
-<footer class="footer mt-auto py-3 bg-light">
-    <div class="container">
-        <span class="text-muted">All rights are reserved</span>
-    </div>
-</footer>
 
-<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
+{% block "paginator" %} 
 
-</body>
-</html>
+{% endblock %}

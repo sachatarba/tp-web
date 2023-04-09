@@ -45,7 +45,7 @@ margin-bottom: 5%;
 
 
 .questions-header {
-margin-top: 60px;
+margin-top: 70px;
 }
 
 .hot-questions > a {
@@ -68,7 +68,7 @@ object-fit: cover;
 }
 
 .question-asker {
-margin-top: 70px;
+margin-top: 0px;
 margin-bottom: 20px;
 }
 
