@@ -87,6 +87,10 @@ class Command(BaseCommand):
             author=Profile.objects.get(name="User {}".format(random.randrange(max_users) + 1)),
             is_correct=(random.choice([True, False]))
         )
+
+        if (i % 100 == 0):
+            print(f"{i}")
+
         return tmp
 
     def question_likes_generator(self, max_questions, max_users):

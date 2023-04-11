@@ -28,13 +28,16 @@ def login(request):
 
 
 def question(request, question_id):
-    if (question_id > models.Question.objects.count() or question_id == 0):
-        return render(request, "404.html")
+    # if (question_id > models.Question.objects.count() or question_id == 0):
+    #     return render(request, "404.html")
     
-    tags = models.Tag.objects.get_top()
-    members = models.Profile.objects.get_top()
-    question = models.Question.objects.get(id=question_id)
-    context = { "question": question, "members": members, "tags" : tags }
+    try :
+        tags = models.Tag.objects.get_top()
+        members = models.Profile.objects.get_top()
+        question = models.Question.objects.get(id=question_id)
+        context = { "question": question, "members": members, "tags" : tags }
+    except:
+        return render(request, "404.html")
 
     return render(request, "question.html", context=context)
 
