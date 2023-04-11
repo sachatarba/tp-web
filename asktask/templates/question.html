@@ -20,7 +20,7 @@
             </div>
             <div class="row">
                 <div class="col-9">
-                    Tags: <a href="{% url "tags" "black_jack" %}">black_jack</a>, <a href="{% url "tags" "black_jack" %}">black_jack</a>
+                    Tags: {% for tag in question.tags.all %} <a href="{% url "tags" tag.name %}">{{ tag }},</a> {% endfor %}
                 </div>
                 <div class="col-1" style="padding: 0px 0px 20px 0px">
                     <div class="like">
@@ -28,14 +28,14 @@
                     </div>
                 </div>
                 <div class="col-1" style="padding-top: 14px; padding-left: 0px">
-                    <p class="likes-counter">1</p>
+                    <p class="likes-counter">{{ question.rating }}</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-{% for answer in answers %} 
+{% for answer in question.all_answers %} 
     {% include "./inc/question_answer_item.html" %} 
 {% endfor %}
 

@@ -72,18 +72,18 @@
                     {% block "tags" %}
                     <div class="tags">
                         <p>
-                            <a href="#" style="color: black;">perl</a>
-                            <a href="#" style="color: red;">Python</a>
-                            <a href="#" style="color: black;">TechnoPark</a>
+                            {% if tags.0.name %}<a href="{% url "tags" tags.0.name %}" style="color: black;">{{ tags.0 }}</a>{% endif %}
+                            {% if tags.1.name %}<a href="{% url "tags" tags.1.name %}" style="color: red;">{{ tags.1 }}</a>{% endif %}
+                            {% if tags.2.name %}<a href="{% url "tags" tags.2.name %}" style="color: black;">{{ tags.2 }}</a>{% endif %}
                         </p>
                         <p>
-                            <a href="#" style="color: black;">MySql</a>
-                            <a href="#" style="color: green;">django</a>
+                            {% if tags.2.name %}<a href="{% url "tags" tags.3.name %}" style="color: black;">{{ tags.3 }}</a>{% endif %}
+                            {% if tags.3.name %}<a href="{% url "tags" tags.4.name %}" style="color: green;">{{ tags.4 }}</a>{% endif %}
                         </p>
                         <p>
-                            <a href="#" style="color: orange;">Mail.ru</a>
-                            <a href="#" style="color: black;">Voloshin</a>
-                            <a href="#" style="color: purple;">Firefox</a>
+                            {% if tags.4.name %}<a href="{% url "tags" tags.5.name %}" style="color: orange;">{{ tags.5 }}</a>{% endif %}
+                            {% if tags.5.name %}<a href="{% url "tags" tags.6.name %}" style="color: black;">{{ tags.6 }}</a>{% endif %}
+                            {% if tags.6.name %}<a href="{% url "tags" tags.7.name %}" style="color: purple;">{{ tags.7 }}</a>{% endif %}
                         </p>
                     </div>
                     {% endblock %}
@@ -94,11 +94,11 @@
                 <div class="row">
                     {% block "members" %}
                     <div class="members">
-                        <p><a href="#">Mr.Freeman</a></p>
-                        <p><a href="#">Dr.House</a></p>
-                        <p><a href="#">Bender</a></p>
-                        <p><a href="#">Queen Victoria</a></p>
-                        <p><a href="#">V. Pupkin</a></p>
+                        <p><a href="#" style="color: black">{{ members.0 }}</a></p>
+                        <p><a href="#" style="color: black">{{ members.1 }}</a></p>
+                        <p><a href="#" style="color: black">{{ members.2 }}</a></p>
+                        <p><a href="#" style="color: black">{{ members.3 }}</a></p>
+                        <p><a href="#" style="color: black">{{ members.4 }}</a></p>
                     </div>
                     {% endblock %}
                 </div>

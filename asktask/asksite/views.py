@@ -3,41 +3,76 @@ from django.shortcuts import render
 from . import models
 
 def index(request):
-    context = {"questions": models.QUESTIONS}
+    questions = models.Question.objects.get_new()
+    tags = models.Tag.objects.get_top()
+    members = models.Profile.objects.get_top()
+    context = {"questions": questions, "tags" : tags, "members" : members}
+
     return render(request, "index.html", context=context)
 
 
 def ask(request):
-    return render(request, "ask.html")
+    tags = models.Tag.objects.get_top()
+    members = models.Profile.objects.get_top()
+    context = { "members": members, "tags" : tags }
+
+    return render(request, "ask.html", context=context)
 
 
 def login(request):
-    return render(request, "login.html")
+    tags = models.Tag.objects.get_top()
+    members = models.Profile.objects.get_top()
+    context = { "members": members, "tags" : tags }
+
+    return render(request, "login.html", context=context)
 
 
 def question(request, question_id):
-    if (question_id >= len(models.QUESTIONS)):
+    if (question_id > models.Question.objects.count() or question_id == 0):
         return render(request, "404.html")
     
-    context = { "question": models.QUESTIONS[question_id], "answers" : models.ANSWERS }
+    tags = models.Tag.objects.get_top()
+    members = models.Profile.objects.get_top()
+    question = models.Question.objects.get(id=question_id)
+    context = { "question": question, "members": members, "tags" : tags }
+
     return render(request, "question.html", context=context)
 
 
 def settings(request):
-    return render(request, "settings.html")
+    tags = models.Tag.objects.get_top()
+    members = models.Profile.objects.get_top()
+    context = { "members" : members, "tags" : tags }
+
+    return render(request, "settings.html", context=context)
 
 
 def signup(request):
-    return render(request, "signup.html")
+    tags = models.Tag.objects.get_top()
+    members = models.Profile.objects.get_top()
+    context = { "members" : members, "tags" : tags }
+
+    return render(request, "signup.html", context=context)
 
 
 def tags(request, tag_name):
-    context = { "tag_name": tag_name, "questions" : models.QUESTIONS }
+    try:
+        tags = models.Tag.objects.get_top()
+        members = models.Profile.objects.get_top()
+        questions = models.Tag.objects.get_all_questions(tag_name)
+        context = { "tag_name": tag_name, "questions" : questions, "members" : members, "tags" : tags }
+    except Exception:
+        return render(request, "404.html")
+    
     return render(request, "tags.html", context=context)
 
 
 def hot(request):
-    context = {"questions": models.QUESTIONS}
+    tags = models.Tag.objects.get_top()
+    members = models.Profile.objects.get_top()
+    questions = models.Question.objects.get_hot()
+    context = { "questions": questions, "members" : members, "tags" : tags }
+
     return render(request, "hot.html", context=context)
 
 # Create your views here.
