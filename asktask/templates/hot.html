@@ -1,22 +1,26 @@
 {% extends "./inc/base.html" %}
 {% load static %}
 
-{% block "user-info" %}
+{% block "user-info" %} 
     {% include "./inc/authorized_user.html" %}
 {% endblock %}
 
 
-{% block "header" %}
+{% block "header" %} 
 <div class="row align-items-end">
     <div class="col-4">
-        <h1>Tag: {{ tag_name }}</h1>
+        <h1>Hot questions</h1>
+    </div>
+    <div class="col-4">
+        <div class="hot-questions">
+            <h1><a href="{% url "index" %}">New questions</a></h1>
+        </div>
     </div>
 </div>
 {% endblock %}
 
-{% block "main-body" %}
+{% block "main-body" %} 
     {% for question in questions %}
         {% include "./inc/question_item.html" %}
     {% endfor %}
 {% endblock %}
-

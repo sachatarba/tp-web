@@ -1,0 +1,26 @@
+{% load static %}
+
+<span class="user-info">
+    <div class="row">
+        <div class="col-3">
+            <div class="user-avatar">
+                <img src="{% static "img/unknown_user.png" %}" alt="avatar">
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="row">
+                <div class="col-12">
+                    <font color="white">Dr.House</font>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <a href="{% url "settings" %}">settings</a>
+                </div>
+                <div class="col-6">
+                    <a href="{% url "login" %}">log out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</span>
